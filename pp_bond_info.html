@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Political Parties Bond Info</title>
+</head>
+<body>
+      <h1>Welcome to this page where you can find Bond Info for any Political Party</h1>
+
+    <form action="/pp_bond_search" method="post">
+        <select name="poli_bs" id="ppbs">
+          <option value="ALL INDIA ANNA DRAVIDA MUNNETRA KAZHAGAM">ALL INDIA ANNA DRAVIDA MUNNETRA KAZHAGAM</option>
+          <option value="HARAT RASHTRA SAMITHI">BHARAT RASHTRA SAMITHI</option>
+          <option value="BHARATIYA JANATA PARTY">BHARATIYA JANATA PARTY</option>
+          <option value="PRESIDENT, ALL INDIA CONGRESS COMMITTEE">PRESIDENT, ALL INDIA CONGRESS COMMITTEE</option>
+          <option value="SHIVSENA">SHIVSENA</option>
+          <option value="TELUGU DESAM PARTY">TELUGU DESAM PARTY</option>
+          <option value="YSR CONGRESS PARTY (YUVAJANA SRAMIKA RYTHU CONGRESS PARTY)">YSR CONGRESS PARTY (YUVAJANA SRAMIKA RYTHU CONGRESS PARTY)</option>
+          <option value="DRAVIDA MUNNETRA KAZHAGAM (DMK)">DRAVIDA MUNNETRA KAZHAGAM (DMK)</option>
+          <option value="JANATA DAL ( SECULAR )">JANATA DAL ( SECULAR )</option>
+          <option value="NATIONALIST CONGRESS PARTY MAHARASHTRA PRADESH">NATIONALIST CONGRESS PARTY MAHARASHTRA PRADESH</option>
+          <option value="ALL INDIA TRINAMOOL CONGRESS">ALL INDIA TRINAMOOL CONGRESS</option>
+          <option value="BIHAR PRADESH JANTA DAL(UNITED)">BIHAR PRADESH JANTA DAL(UNITED)</option>
+          <option value="RASHTRIYA JANTA DAL">RASHTRIYA JANTA DAL</option>
+          <option value="AAM AADMI PARTY">AAM AADMI PARTY</option>
+          <option value="ADYAKSHA SAMAJVADI PARTY">ADYAKSHA SAMAJVADI PARTY</option>
+          <option value="SHIROMANI AKALI DAL">SHIROMANI AKALI DAL</option>
+          <option value="JHARKHAND MUKTI MORCHA">JHARKHAND MUKTI MORCHA</option>
+          <option value="JAMMU AND KASHMIR NATIONAL CONFERENCE">JAMMU AND KASHMIR NATIONAL CONFERENCE</option>
+          <option value="BIJU JANATA DAL">BIJU JANATA DAL</option>
+          <option value="GOA FORWARD PARTY">GOA FORWARD PARTY</option>
+          <option value="MAHARASHTRAWADI GOMNTAK PARTY">MAHARASHTRAWADI GOMNTAK PARTY</option>
+          <option value="SIKKIM KRANTIKARI MORCHA">SIKKIM KRANTIKARI MORCHA</option>
+          <option value="JANASENA PARTY">JANASENA PARTY</option>
+          <option value="SIKKIM DEMOCRATIC FRONT">SIKKIM DEMOCRATIC FRONT</option>
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+      
+      <h2>Result</h2>
+      {% if bond_num %}
+      <p>Selected Party: {{ party_name }}</p>
+      <p>Total Number of Bonds : {{ bond_num }}</p>
+      <p>Total Bond Value: {{bond_value}}</p>
+      {% else %}
+      <p>No party selected</p>
+      {% endif %}
+
+
+      
+
+</body>
+</html>

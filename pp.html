@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Political Parties EB Search</title>
+</head>
+<body>
+    <h1> Welcome to the Political Party search system. Feel free to search for info in the database using any of the following fields.</h1>
+    {% if pp_data %}
+    {{ pp_data }}
+    {% endif %}
+    <form method="post" action="/pp_eb_search">
+        <label>Search for the EB information on a Party:</label>
+        <input name="pp_box" type="text" id="eb_search">
+        <input id="search" type="submit">
+    </form>
+    {% if pp_search_data %}
+    <table border="1">
+        <tr>
+            <th>Serial No</th>
+            <th> Date of Encashment</th>
+            <th> Name of Political Party</th>
+            <th> Account No. of Political Party</th>
+            <th> Prefix</th>
+            <th> Bond Number</th>
+            <th> Denominations</th>
+            <th> Pay Branch Code</th>
+            <th> Pay Teller</th>
+        </tr>
+        {% for row in pp_search_data %}
+        <tr>
+            {%for i in range(9)%}
+               <td>{{ row[i] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}     
+    </table>
+    {% endif %} 
+
+
+
+    <form method="post" action="/pp_eb_doe_search">
+        <label>Search for the EB information on a Party based on Date of Encashment:</label>
+        <input name="pp_doe_box" type="text" id="eb_doe_search">
+        <input id="doe_search" type="submit">
+    </form>
+    {% if pp_doe_search_data %}
+    <table border="1">
+        <tr>
+            <th>Serial No</th>
+            <th> Date of Encashment</th>
+            <th> Name of Political Party</th>
+            <th> Account No. of Political Party</th>
+            <th> Prefix</th>
+            <th> Bond Number</th>
+            <th> Denominations</th>
+            <th> Pay Branch Code</th>
+            <th> Pay Teller</th>
+        </tr>
+        {% for row in pp_doe_search_data %}
+        <tr>
+            {%for i in range(9)%}
+               <td>{{ row[i] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}     
+    </table>
+    {% endif %} 
+
+
+    <form method="post" action="/pp_eb_an_search">
+        <label>Search for the EB information on a Party based on Account Number:</label>
+        <input name="pp_an_box" type="text" id="eb_an_search">
+        <input id="doe_an_search_sb" type="submit">
+    </form>
+    {% if pp_an_search_data %}
+    <table border="1">
+        <tr>
+            <th>Serial No</th>
+            <th> Date of Encashment</th>
+            <th> Name of Political Party</th>
+            <th> Account No. of Political Party</th>
+            <th> Prefix</th>
+            <th> Bond Number</th>
+            <th> Denominations</th>
+            <th> Pay Branch Code</th>
+            <th> Pay Teller</th>
+        </tr>
+        {% for row in pp_an_search_data %}
+        <tr>
+            {%for i in range(9)%}
+               <td>{{ row[i] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}     
+    </table>
+    {% endif %} 
+
+
+    <form method="post" action="/pp_eb_p_search">
+        <label>Search for the EB information on a Party based on Prefix:</label>
+        <input name="pp_p_box" type="text" id="eb_p_search">
+        <input id="doe_p_search_sb" type="submit">
+    </form>
+    {% if pp_p_search_data %}
+    <table border="1">
+        <tr>
+            <th>Serial No</th>
+            <th> Date of Encashment</th>
+            <th> Name of Political Party</th>
+            <th> Account No. of Political Party</th>
+            <th> Prefix</th>
+            <th> Bond Number</th>
+            <th> Denominations</th>
+            <th> Pay Branch Code</th>
+            <th> Pay Teller</th>
+        </tr>
+        {% for row in pp_p_search_data %}
+        <tr>
+            {%for i in range(9)%}
+               <td>{{ row[i] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}     
+    </table>
+    {% endif %} 
+
+
+    
+    <form method="post" action="/pp_eb_bn_search">
+        <label>Search for the EB information on a Party based on Bond Number:</label>
+        <input name="pp_bn_box" type="text" id="eb_bn_search">
+        <input id="doe_bn_search_sb" type="submit">
+    </form>
+    {% if pp_bn_search_data %}
+    <table border="1">
+        <tr>
+            <th>Serial No</th>
+            <th> Date of Encashment</th>
+            <th> Name of Political Party</th>
+            <th> Account No. of Political Party</th>
+            <th> Prefix</th>
+            <th> Bond Number</th>
+            <th> Denominations</th>
+            <th> Pay Branch Code</th>
+            <th> Pay Teller</th>
+        </tr>
+        {% for row in pp_bn_search_data %}
+        <tr>
+            {%for i in range(9)%}
+               <td>{{ row[i] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}     
+    </table>
+    {% endif %} 
+
+    <form method="post" action="/pp_eb_dn_search">
+        <label>Search for the EB information on a Party based on Denominations:</label>
+        <input name="pp_dn_box" type="text" id="eb_dn_search">
+        <input id="doe_dn_search_sb" type="submit">
+    </form>
+    {% if pp_dn_search_data %}
+    <table border="1">
+        <tr>
+            <th>Serial No</th>
+            <th> Date of Encashment</th>
+            <th> Name of Political Party</th>
+            <th> Account No. of Political Party</th>
+            <th> Prefix</th>
+            <th> Bond Number</th>
+            <th> Denominations</th>
+            <th> Pay Branch Code</th>
+            <th> Pay Teller</th>
+        </tr>
+        {% for row in pp_dn_search_data %}
+        <tr>
+            {%for i in range(9)%}
+               <td>{{ row[i] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}     
+    </table>
+    {% endif %} 
+
+    <form method="post" action="/pp_eb_pb_search">
+        <label>Search for the EB information on a Party based on Pay Branch Code :</label>
+        <input name="pp_pb_box" type="text" id="eb_pb_search">
+        <input id="doe_pb_search_sb" type="submit">
+    </form>
+    {% if pp_pb_search_data %}
+    <table border="1">
+        <tr>
+            <th>Serial No</th>
+            <th> Date of Encashment</th>
+            <th> Name of Political Party</th>
+            <th> Account No. of Political Party</th>
+            <th> Prefix</th>
+            <th> Bond Number</th>
+            <th> Denominations</th>
+            <th> Pay Branch Code</th>
+            <th> Pay Teller</th>
+        </tr>
+        {% for row in pp_pb_search_data %}
+        <tr>
+            {%for i in range(9)%}
+               <td>{{ row[i] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}     
+    </table>
+    {% endif %} 
+
+
+    <form method="post" action="/pp_eb_pt_search">
+        <label>Search for the EB information on a Party based on Pay Teller :</label>
+        <input name="pp_pt_box" type="text" id="eb_pt_search">
+        <input id="doe_pt_search_sb" type="submit">
+    </form>
+    {% if pp_pt_search_data %}
+    <table border="1">
+        <tr>
+            <th>Serial No</th>
+            <th> Date of Encashment</th>
+            <th> Name of Political Party</th>
+            <th> Account No. of Political Party</th>
+            <th> Prefix</th>
+            <th> Bond Number</th>
+            <th> Denominations</th>
+            <th> Pay Branch Code</th>
+            <th> Pay Teller</th>
+        </tr>
+        {% for row in pp_pt_search_data %}
+        <tr>
+            {%for i in range(9)%}
+               <td>{{ row[i] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}     
+    </table>
+    {% endif %} 
+
+</body>
+</html>
