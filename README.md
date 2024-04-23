@@ -1,7 +1,7 @@
 # DCC_Assignment_23110316
 This is my GitHub repository for the DCC Assignment.
 
-Step-1: Download my template and main.py files from the branch 'Templates&Main'
+Step-1: Download my template and main.py files from the branch 'Templates_Main'. Template files end with .html and main file with .py. Make sure that templates file are in a separate 'templates' folder to be used.
 
 Step-2: A few edits I would like you to do is edit the CSV file of the Databases, such that their Column headings have no 'big spaces' like '
      'this between each word. It caused a lot of problems when executing in MySQL. Also, change the datatype in Denominations from 'text' to 'int', so that you will be able to calculate the sum of all the Electoral Bond Values.
