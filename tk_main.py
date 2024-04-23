@@ -36,7 +36,7 @@ def pp_search():
         cursor.close()
     
     if len(data) == 0:
-        return render_template("index.html", a_5_data = [["Not Found !!!"]]) 
+        return render_template("index.html", pp_search_data = [["Not Found !!!"]]) 
     return render_template("pp.html", pp_search_data = data)
 
 
