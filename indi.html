@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Political Parties EB Search</title>
+</head>
+<body>
+    <p>Welcome to the Political Party search system. Feel free to search for info in the database using any of the following fields</p>
+    {% if pp_data %}
+    {{ pp_data }}
+    {% endif %}
+    <form method="post" action="/indi_eb_rn_search">
+        <label>Search for the Return No (URN) information on an Individual/Company:</label>
+        <input name="indi_rn_box" type="text" id="rn_search">
+        <input id="rn_search_submit" type="submit">
+    </form>
+    {% if indi_rn_search_data %}
+    <table border="1">
+        <tr>
+            <th>Sr No</th>
+            <th> Reference No. (URN)</th>
+            <th> Journal date</th>
+            <th> Date of Purchase</th>
+            <th> Date of Expiry</th>
+            <th> Name of the Purchaser</th>
+            <th> Prefix</th>
+            <th> Bond Number</th>
+            <th> Denominations</th>
+            <th> Issue Branch Code</th>
+            <th> Issue Teller</th>
+            <th> Status</th>
+        </tr>
+        {% for row in indi_rn_search_data %}
+        <tr>
+            {%for i in range(12)%}
+               <td>{{ row[i] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}     
+    </table>
+    {% endif %} 
+
+    <form method="post" action="/indi_eb_jd_search">
+        <label>Search for the Journal Date on an Individual/Company:</label>
+        <input name="indi_jd_box" type="text" id="jd_search">
+        <input id="jd_search_submit" type="submit">
+    </form>
+    {% if indi_jd_search_data %}
+    <table border="1">
+        <tr>
+            <th>Sr No</th>
+            <th> Reference No. (URN)</th>
+            <th> Journal date</th>
+            <th> Date of Purchase</th>
+            <th> Date of Expiry</th>
+            <th> Name of the Purchaser</th>
+            <th> Prefix</th>
+            <th> Bond Number</th>
+            <th> Denominations</th>
+            <th> Issue Branch Code</th>
+            <th> Issue Teller</th>
+            <th> Status</th>
+        </tr>
+        {% for row in indi_jd_search_data %}
+        <tr>
+            {%for i in range(12)%}
+               <td>{{ row[i] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}     
+    </table>
+    {% endif %} 
+
+    
+    <form method="post" action="/indi_eb_dop_search">
+        <label>Search for the Date of Purchase on an Individual/Company:</label>
+        <input name="indi_dop_box" type="text" id="dop_search">
+        <input id="dop_search_submit" type="submit">
+    </form>
+    {% if indi_dop_search_data %}
+    <table border="1">
+        <tr>
+            <th>Sr No</th>
+            <th> Reference No. (URN)</th>
+            <th> Journal date</th>
+            <th> Date of Purchase</th>
+            <th> Date of Expiry</th>
+            <th> Name of the Purchaser</th>
+            <th> Prefix</th>
+            <th> Bond Number</th>
+            <th> Denominations</th>
+            <th> Issue Branch Code</th>
+            <th> Issue Teller</th>
+            <th> Status</th>
+        </tr>
+        {% for row in indi_dop_search_data %}
+        <tr>
+            {%for i in range(12)%}
+               <td>{{ row[i] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}     
+    </table>
+    {% endif %} 
+
+    <form method="post" action="/indi_eb_doe_search">
+        <label>Search for the Date of Expiry on an Individual/Company:</label>
+        <input name="indi_doe_box" type="text" id="doe_search">
+        <input id="doe_search_submit" type="submit">
+    </form>
+    {% if indi_doe_search_data %}
+    <table border="1">
+        <tr>
+            <th>Sr No</th>
+            <th> Reference No. (URN)</th>
+            <th> Journal date</th>
+            <th> Date of Purchase</th>
+            <th> Date of Expiry</th>
+            <th> Name of the Purchaser</th>
+            <th> Prefix</th>
+            <th> Bond Number</th>
+            <th> Denominations</th>
+            <th> Issue Branch Code</th>
+            <th> Issue Teller</th>
+            <th> Status</th>
+        </tr>
+        {% for row in indi_doe_search_data %}
+        <tr>
+            {%for i in range(12)%}
+               <td>{{ row[i] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}     
+    </table>
+    {% endif %} 
+
+    <form method="post" action="/indi_eb_nop_search">
+        <label>Search for the Name of the Purchaser on an Individual/Company:</label>
+        <input name="indi_nop_box" type="text" id="nop_search">
+        <input id="nop_search_submit" type="submit">
+    </form>
+    {% if indi_nop_search_data %}
+    <table border="1">
+        <tr>
+            <th>Sr No</th>
+            <th> Reference No. (URN)</th>
+            <th> Journal date</th>
+            <th> Date of Purchase</th>
+            <th> Date of Expiry</th>
+            <th> Name of the Purchaser</th>
+            <th> Prefix</th>
+            <th> Bond Number</th>
+            <th> Denominations</th>
+            <th> Issue Branch Code</th>
+            <th> Issue Teller</th>
+            <th> Status</th>
+        </tr>
+        {% for row in indi_nop_search_data %}
+        <tr>
+            {%for i in range(12)%}
+               <td>{{ row[i] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}     
+    </table>
+    {% endif %} 
+
+    <form method="post" action="/indi_eb_p_search">
+        <label>Search for the Prefix on an Individual/Company:</label>
+        <input name="indi_p_box" type="text" id="p_search">
+        <input id="p_search_submit" type="submit">
+    </form>
+    {% if indi_p_search_data %}
+    <table border="1">
+        <tr>
+            <th>Sr No</th>
+            <th> Reference No. (URN)</th>
+            <th> Journal date</th>
+            <th> Date of Purchase</th>
+            <th> Date of Expiry</th>
+            <th> Name of the Purchaser</th>
+            <th> Prefix</th>
+            <th> Bond Number</th>
+            <th> Denominations</th>
+            <th> Issue Branch Code</th>
+            <th> Issue Teller</th>
+            <th> Status</th>
+        </tr>
+        {% for row in indi_p_search_data %}
+        <tr>
+            {%for i in range(12)%}
+               <td>{{ row[i] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}     
+    </table>
+    {% endif %}
+    
+    
+    <form method="post" action="/indi_eb_bn_search">
+        <label>Search for the Bond Number on an Individual/Company:</label>
+        <input name="indi_bn_box" type="text" id="bn_search">
+        <input id="bn_search_submit" type="submit">
+    </form>
+    {% if indi_bn_search_data %}
+    <table border="1">
+        <tr>
+            <th>Sr No</th>
+            <th> Reference No. (URN)</th>
+            <th> Journal date</th>
+            <th> Date of Purchase</th>
+            <th> Date of Expiry</th>
+            <th> Name of the Purchaser</th>
+            <th> Prefix</th>
+            <th> Bond Number</th>
+            <th> Denominations</th>
+            <th> Issue Branch Code</th>
+            <th> Issue Teller</th>
+            <th> Status</th>
+        </tr>
+        {% for row in indi_bn_search_data %}
+        <tr>
+            {%for i in range(12)%}
+               <td>{{ row[i] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}     
+    </table>
+    {% endif %}
+
+    <form method="post" action="/indi_eb_dn_search">
+        <label>Search for the Bond Number on an Individual/Company:</label>
+        <input name="indi_dn_box" type="text" id="dn_search">
+        <input id="dn_search_submit" type="submit">
+    </form>
+    {% if indi_bn_search_data %}
+    <table border="1">
+        <tr>
+            <th>Sr No</th>
+            <th> Reference No. (URN)</th>
+            <th> Journal date</th>
+            <th> Date of Purchase</th>
+            <th> Date of Expiry</th>
+            <th> Name of the Purchaser</th>
+            <th> Prefix</th>
+            <th> Bond Number</th>
+            <th> Denominations</th>
+            <th> Issue Branch Code</th>
+            <th> Issue Teller</th>
+            <th> Status</th>
+        </tr>
+        {% for row in indi_bn_search_data %}
+        <tr>
+            {%for i in range(12)%}
+               <td>{{ row[i] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}     
+    </table>
+    {% endif %}
+
+    <form method="post" action="/indi_eb_ibc_search">
+        <label>Search for the Issue Branch Code on an Individual/Company:</label>
+        <input name="indi_ibc_box" type="text" id="ibc_search">
+        <input id="ibc_search_submit" type="submit">
+    </form>
+    {% if indi_ibc_search_data %}
+    <table border="1">
+        <tr>
+            <th>Sr No</th>
+            <th> Reference No. (URN)</th>
+            <th> Journal date</th>
+            <th> Date of Purchase</th>
+            <th> Date of Expiry</th>
+            <th> Name of the Purchaser</th>
+            <th> Prefix</th>
+            <th> Bond Number</th>
+            <th> Denominations</th>
+            <th> Issue Branch Code</th>
+            <th> Issue Teller</th>
+            <th> Status</th>
+        </tr>
+        {% for row in indi_ibc_search_data %}
+        <tr>
+            {%for i in range(12)%}
+               <td>{{ row[i] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}     
+    </table>
+    {% endif %}
+
+    <form method="post" action="/indi_eb_it_search">
+        <label>Search for the Issue Teller on an Individual/Company:</label>
+        <input name="indi_it_box" type="text" id="it_search">
+        <input id="it_search_submit" type="submit">
+    </form>
+    {% if indi_it_search_data %}
+    <table border="1">
+        <tr>
+            <th>Sr No</th>
+            <th> Reference No. (URN)</th>
+            <th> Journal date</th>
+            <th> Date of Purchase</th>
+            <th> Date of Expiry</th>
+            <th> Name of the Purchaser</th>
+            <th> Prefix</th>
+            <th> Bond Number</th>
+            <th> Denominations</th>
+            <th> Issue Branch Code</th>
+            <th> Issue Teller</th>
+            <th> Status</th>
+        </tr>
+        {% for row in indi_it_search_data %}
+        <tr>
+            {%for i in range(12)%}
+               <td>{{ row[i] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}     
+    </table>
+    {% endif %}
+
+    <form method="post" action="/indi_eb_s_search">
+        <label>Search for the Status on an Individual/Company:</label>
+        <input name="indi_s_box" type="text" id="s_search">
+        <input id="s_search_submit" type="submit">
+    </form>
+    {% if indi_s_search_data %}
+    <table border="1">
+        <tr>
+            <th>Sr No</th>
+            <th> Reference No. (URN)</th>
+            <th> Journal date</th>
+            <th> Date of Purchase</th>
+            <th> Date of Expiry</th>
+            <th> Name of the Purchaser</th>
+            <th> Prefix</th>
+            <th> Bond Number</th>
+            <th> Denominations</th>
+            <th> Issue Branch Code</th>
+            <th> Issue Teller</th>
+            <th> Status</th>
+        </tr>
+        {% for row in indi_s_search_data %}
+        <tr>
+            {%for i in range(12)%}
+               <td>{{ row[i] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}     
+    </table>
+    {% endif %}
+
+    {{indi_data}}
+</body>
+</html>
