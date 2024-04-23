@@ -44,3 +44,5 @@ I have provided images for the webpages, for easy following, note the filename, 
 ![index_ss](https://github.com/ThoshithKautilya19/DCC_Assignment_23110316/assets/143333995/b214359c-c9eb-42f8-8d53-4a657d0812a1)
 
 I have referenced from the code files from mentors Aamod Thakur and Ritesh Patidar during the tutorial.
+
+Provided the code to convert from pdf to csv using Fritz. Upload the given files onto drive and use them with their specific path.You'll get a new excel file of the same, which can be downloaded.
